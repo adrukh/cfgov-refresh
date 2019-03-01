@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup as bs
 from flags.state import flag_enabled
 
 from ask_cfpb.models import Answer, AnswerPage, AnswerResultsPage
+from ask_cfpb.models.pages import EnglishAnswerPageProxy, SpanishAnswerPageProxy
 
 
 def annotate_links(answer_text):
@@ -103,21 +104,21 @@ def ask_search(request, language='en', as_json=False):
     if 'selected_facets' in request.GET:
         return redirect_ask_search(request, language=language)
     language_map = {
-        'en': 'ask-cfpb-search-results',
-        'es': 'respuestas'
+        'en': {'slug': 'ask-cfpb-search-results',
+               'query': SearchQuerySet().models(EnglishAnswerPageProxy)},
+        'es': {'slug': 'respuestas',
+               'query': SearchQuerySet().models(SpanishAnswerPageProxy)}
     }
-    sqs = SearchQuerySet().models(AnswerPage)
+    _map = language_map[language]
+    sqs = _map['query']
     clean_query = Clean(request.GET.get('q', ''))
     clean_qstring = clean_query.query_string.strip()
     qstring = clean_qstring
-    query_sqs = sqs.filter(
-        content=clean_query,
-        language=language
-    )
+    query_sqs = sqs.filter(content=clean_query,)
     results_page = get_object_or_404(
         AnswerResultsPage,
         language=language,
-        slug=language_map[language]
+        slug=_map['slug']
     )
 
     # If there's no query string, don't search
@@ -170,11 +171,11 @@ def ask_autocomplete(request, language='en'):
         'term', '').strip().replace('<', '')
     if not term:
         return JsonResponse([], safe=False)
-    sqs = SearchQuerySet().models(AnswerPage)
-    sqs = sqs.autocomplete(
-        autocomplete=term,
-        language=language
-    )
+    if language == 'es':
+        sqs = SearchQuerySet().models(SpanishAnswerPageProxy)
+    else:
+        sqs = SearchQuerySet().models(EnglishAnswerPageProxy)
+    sqs = sqs.autocomplete(autocomplete=term)
     results = [{'question': result.autocomplete,
                 'url': result.url}
                for result in sqs[:20]]

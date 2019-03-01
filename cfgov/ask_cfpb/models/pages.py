@@ -725,3 +725,15 @@ class AnswerPage(CFGOVPage):
     @property
     def split_test_id(self):
         return self.answer_base.id
+
+
+class EnglishAnswerPageProxy(AnswerPage):
+    """A no-op proxy class to allow separate language indexing in Haystack"""
+    class Meta:
+        proxy = True
+
+
+class SpanishAnswerPageProxy(AnswerPage):
+    """A no-op proxy class to allow separate language indexing in Haystack"""
+    class Meta:
+        proxy = True
