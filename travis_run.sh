@@ -15,6 +15,9 @@ elif [ "$RUNTEST" == "backend" ]; then
     tox -e missing-migrations
     tox -e fast
     bash <(curl -s https://codecov.io/bash) -F backend
+elif [ "$RUNTEST" == "backend3" ]; then
+    tox -e lint-py36
+    tox -e unittest-py36-dj111-wag113-fast agreements alerts ask_cfpb core jobmanager legacy permissions_viewer regulations3k scripts search wellbeing
 elif [ "$RUNTEST" == "docs" ]; then
     mkdocs build
 fi
