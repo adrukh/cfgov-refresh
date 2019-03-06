@@ -90,7 +90,7 @@ def get_secondary_nav_items(request, current_page):
                 ),
                 sibling.get_children().specific()
             )
-            if len(visible_children):
+            if len(list(visible_children)):
                 has_children = True
                 for child in visible_children:
                     child_selected = current_page.pk == child.pk
