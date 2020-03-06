@@ -1,1 +1,1 @@
-../../django.txt
+django==1.11.29
