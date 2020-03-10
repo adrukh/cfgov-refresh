@@ -68,7 +68,7 @@
     "turbolinks": "5.1.1",
     "uglifyjs-webpack-plugin": "1.2.7",
     "vinyl-named": "1.1.0",
-    "webpack": "4.16.5",
+    "webpack": "4.29.0",
     "webpack-stream": "5.0.0",
     "xdr": "0.5.3"
   },
