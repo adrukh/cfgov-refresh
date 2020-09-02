@@ -599,6 +599,43 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@cfpb/cfpb-core@0.1.0", "@cfpb/cfpb-core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cfpb/cfpb-core/-/cfpb-core-0.1.0.tgz#2b77ea7a4dce6fdd1866b214611f08c38bfc0638"
+  integrity sha512-aAJgd5pPr8dsfPnvTnwJPjnr3F2VARwufme3yuYexeQ/RA+sYB184swmvY93fh6LPdplUWaYOMWv5VEZGzZqBQ==
+  dependencies:
+    normalize-css "^2.0.0"
+    normalize-legacy-addon "0.1.0"
+
+"@cfpb/cfpb-grid@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cfpb/cfpb-grid/-/cfpb-grid-0.1.0.tgz#2482e7793c47c4575de4f13c52778f9f3906a442"
+  integrity sha512-T3cMIVhQvmIMg76jyQWhPZTbAtOUzERugTuCOFeRQLWhPrZ/gnTMqQ01K2TXsBbo0NGATRoYcRpcBSY5r8/qjg==
+  dependencies:
+    normalize-css "^2.0.0"
+    normalize-legacy-addon "0.1.0"
+
+"@cfpb/cfpb-icons@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cfpb/cfpb-icons/-/cfpb-icons-0.1.0.tgz#a386086f52d5d3168b8da538d86f38f8384fb3f9"
+  integrity sha512-REaMuFEyjB8TbXBhUNd1cn69SuTozOB8NOFoeVyGzZFG2PY15rnGGgT26AEjylAGWOjX5Dchk+0jwBygQ+pZBA==
+
+"@cfpb/cfpb-layout@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@cfpb/cfpb-layout/-/cfpb-layout-0.1.1.tgz#a86b12eaa4b8202e022d09c4bdc21314b0a69f44"
+  integrity sha512-cqFGc98oubzoHQT1otUAK6rRK1G7ap85mR53JMq82hKlI9OjypDuNDvGF739T6IYzgPlqh5EynguzZ8ly1uYOA==
+  dependencies:
+    "@cfpb/cfpb-core" "^0.1.0"
+    "@cfpb/cfpb-grid" "^0.1.0"
+
+"@cfpb/cfpb-typography@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@cfpb/cfpb-typography/-/cfpb-typography-0.1.0.tgz#0bf1b88986062b890da4350887147d35ecfec7aa"
+  integrity sha512-64u4qnrxNyGuCItzj5BgLhEwbCOxreL+LnmRoj54yH8mu+710MqBqlnOpdZHD/+cRymUX9e43fEgMJWJPNGing==
+  dependencies:
+    "@cfpb/cfpb-core" "^0.1.0"
+    "@cfpb/cfpb-icons" "^0.1.0"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -1993,14 +2030,16 @@ cf-typography@5.0.1:
     cf-core "^4.0.0"
     cf-icons "^4.0.0"
 
-cfpb-chart-builder@5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/cfpb-chart-builder/-/cfpb-chart-builder-5.1.2.tgz#2e95b3a458f662f0148b05760f881c8fa06b1215"
+cfpb-chart-builder@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/cfpb-chart-builder/-/cfpb-chart-builder-6.4.1.tgz#2d3b156a289ee1d03a96e7b94a2e2df8a6d5153b"
+  integrity sha512-VpW0B7BWd8mb6z7HdcSnYT5yKx4z922v+j/BvZ0pjJ8Uk+PKu84AzY2v/zG+0a2ziXa1qcCdWB4iFwRhI6tkiQ==
   dependencies:
-    cf-core "4.10.0"
-    cf-layout "5.0.0"
-    cf-typography "5.0.1"
-    highcharts "6.2.0"
+    "@cfpb/cfpb-core" "0.1.0"
+    "@cfpb/cfpb-layout" "0.1.1"
+    "@cfpb/cfpb-typography" "0.1.0"
+    core-js "3.6.5"
+    highcharts "7.2.2"
     xdr "0.5.3"
 
 chai-as-promised@5.x:
@@ -2430,6 +2469,11 @@ copy-props@^2.0.1:
 core-js@2.6.4:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.4.tgz#b8897c062c4d769dd30a0ac5c73976c47f92ea0d"
+
+core-js@3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
+  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
 
 core-js@^2.4.0:
   version "2.6.0"
@@ -4407,6 +4451,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
 highcharts@6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-6.2.0.tgz#2a6d04652eb43c66f462ca7e2d2808f1f2782b61"
+
+highcharts@7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-7.2.2.tgz#94d6bae545d7f0fbf49615b28640f5fdbf99d11e"
+  integrity sha512-jRKujQuPKHLgGQd2sByBI9K5m56CInm2augVZnBYqdmyoU88hcI62uuAXHvxC3FW8YY0FJ74A1uw6sxrcmcmvg==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
