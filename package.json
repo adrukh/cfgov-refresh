@@ -66,9 +66,9 @@
     "postcss-unmq": "1.0.2",
     "svg-inline-loader": "0.8.0",
     "turbolinks": "5.1.1",
-    "uglifyjs-webpack-plugin": "1.2.7",
+    "uglifyjs-webpack-plugin": "2.0.0",
     "vinyl-named": "1.1.0",
-    "webpack": "4.16.5",
+    "webpack": "4.26.0",
     "webpack-stream": "5.0.0",
     "xdr": "0.5.3"
   },
