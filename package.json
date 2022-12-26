@@ -24,7 +24,7 @@
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
     "autoprefixer": "8.6.5",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.2.4",
     "cf-atomic-component": "2.1.2",
     "cf-buttons": "5.0.1",
     "cf-core": "4.10.0",
@@ -68,8 +68,8 @@
     "turbolinks": "5.1.1",
     "uglifyjs-webpack-plugin": "1.2.7",
     "vinyl-named": "1.1.0",
-    "webpack": "4.16.5",
-    "webpack-stream": "5.0.0",
+    "webpack": "5.0.0",
+    "webpack-stream": "7.0.0",
     "xdr": "0.5.3"
   },
   "devDependencies": {
