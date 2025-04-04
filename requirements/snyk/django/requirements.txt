@@ -1,1 +1,1 @@
-../../django.txt
+django==5.0.14
