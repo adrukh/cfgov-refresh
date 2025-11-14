@@ -53,7 +53,7 @@
     "gulp-modernizr": "3.1.0",
     "gulp-newer": "1.4.0",
     "gulp-notify": "3.2.0",
-    "gulp-postcss": "7.0.1",
+    "gulp-postcss": "9.0.1",
     "gulp-rename": "1.4.0",
     "gulp-replace": "1.0.0",
     "gulp-sourcemaps": "2.6.4",
